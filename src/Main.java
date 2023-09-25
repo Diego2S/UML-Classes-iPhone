@@ -8,5 +8,8 @@ public class Main {
         iPhone.iniciarCorreioVoz();
         iPhone.atender();
         iPhone.ligar();
+        iPhone.tocar();
+        iPhone.pausar();
+        iPhone.selecionarMusica();
     }
 }

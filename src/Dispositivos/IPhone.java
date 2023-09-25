@@ -1,8 +1,9 @@
 package Dispositivos;
 
 import Funcionalidades.AparelhoTelefone;
+import Funcionalidades.ReprodutorMusical;
 
-public class IPhone implements AparelhoTelefone {
+public class IPhone implements AparelhoTelefone, ReprodutorMusical {
 
     private String nome;
     private long imei;
@@ -33,5 +34,20 @@ public class IPhone implements AparelhoTelefone {
     @Override
     public void iniciarCorreioVoz() {
         System.out.println(String.format("Ouvindo um Correio de Voz com %s",getNome()));
+    }
+
+    @Override
+    public void tocar() {
+        System.out.println(String.format("Tocando musica no %s",getNome()));
+    }
+
+    @Override
+    public void pausar() {
+        System.out.println(String.format("Musica pausada no %s",getNome()));
+    }
+
+    @Override
+    public void selecionarMusica() {
+        System.out.println(String.format("Selecionando musica no %s",getNome()));
     }
 }
