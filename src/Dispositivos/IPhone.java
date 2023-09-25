@@ -1,9 +1,10 @@
 package Dispositivos;
 
 import Funcionalidades.AparelhoTelefone;
+import Funcionalidades.NavegadorInternet;
 import Funcionalidades.ReprodutorMusical;
 
-public class IPhone implements AparelhoTelefone, ReprodutorMusical {
+public class IPhone implements AparelhoTelefone, ReprodutorMusical, NavegadorInternet {
 
     private String nome;
     private long imei;
@@ -49,5 +50,20 @@ public class IPhone implements AparelhoTelefone, ReprodutorMusical {
     @Override
     public void selecionarMusica() {
         System.out.println(String.format("Selecionando musica no %s",getNome()));
+    }
+
+    @Override
+    public void exibirPagina() {
+        System.out.println(String.format("Exibindo Pagina Web no %s",getNome()));
+    }
+
+    @Override
+    public void adicionarNovaAba() {
+        System.out.println(String.format("Adicionando nova aba Web no %s",getNome()));
+    }
+
+    @Override
+    public void atualizarPagina() {
+        System.out.println(String.format("Atualizando Pagina Web no %s",getNome()));
     }
 }
